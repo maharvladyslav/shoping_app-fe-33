@@ -1,0 +1,44 @@
+.application {
+  display: flex;
+  justify-content: center;
+
+  &__wrap {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__left {
+    padding-top: 367px;
+    padding-bottom: 367px;
+    padding-right: 480px;
+  }
+
+  &__heading {
+    font-size: 48px;
+    letter-spacing: 3px;
+  }
+
+  &__text {
+    font-size: 24px;
+    font-weight: 500;
+    color: $color-text-primary;
+    letter-spacing: -1px;
+    padding-top: 41px;
+    padding-bottom: 65px;
+  }
+
+  &__button--apple {
+    padding-right: 12px;
+  }
+
+  &__right {
+    background-color: $color-text-contrast;
+    width: 328px;
+    height: 710px;
+    outline: 25px solid #c2c8da;
+    border-radius: 35px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 170px;
+  }
+}
