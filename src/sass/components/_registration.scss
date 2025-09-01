@@ -1,0 +1,17 @@
+.registration {
+  @extend %transition-basic;
+  font-weight: 500;
+  font-size: 24px;
+  color: $color-text-contrast;
+  background-color: $color-title;
+  border-radius: 7px;
+  padding: 13px 22px 17px 22px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.registration:hover {
+  @extend %transition-basic;
+  color: $color-title;
+  background-color: $color-text-contrast;
+}

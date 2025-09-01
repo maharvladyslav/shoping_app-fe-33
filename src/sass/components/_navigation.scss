@@ -1,0 +1,21 @@
+.navigation {
+  display: flex;
+  gap: 43px;
+  padding-right: 54px;
+  align-items: center;
+}
+
+.navigation__link {
+  @extend %transition-basic;
+  font-weight: 500;
+  font-size: 22px;
+  color: $color-text-nav;
+  text-transform: uppercase;
+  padding: 13px 22px 17px 22px;
+}
+.navigation__link:hover {
+  @extend %transition-basic;
+  color: $color-text-contrast;
+  border-radius: 7px;
+  background-color: $color-title;
+}
