@@ -1,0 +1,22 @@
+.brands {
+  background-color: #ebd96b;
+  padding-top: 61px;
+  padding-bottom: 55px;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 121px;
+    max-width: 1577px;
+    max-height: 71px;
+    margin: 0 auto;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    max-height: 70px;
+    width: auto;
+  }
+}
