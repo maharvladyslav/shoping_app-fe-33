@@ -1,5 +1,16 @@
 @import './utils/variables';
+@import './utils/placeholders';
 @import './base/common';
 @import './base/reset';
 @import './base/base';
+@import './components/container';
+@import './components/header';
+@import './components/logo';
+@import './components/navigation';
+@import './components/registration';
 @import './components/hero';
+@import './components/brands';
+@import './components/favourite';
+@import './components/application';
+@import './components/mobile';
+@import './components/footer';
