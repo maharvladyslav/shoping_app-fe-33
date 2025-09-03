@@ -1,0 +1,168 @@
+.payday {
+  padding: 60px 0;
+  background-image: linear-gradient(
+    360deg,
+    #e0c340 0%,
+    #dfc23e 3.93%,
+    #e1c441 7.23%,
+    #e3c743 10.23%,
+    #e4c542 13.14%,
+    #e6c744 16.22%,
+    #e7c845 19.84%,
+    #e5c643 24.38%,
+    #e6c945 31%,
+    #e3c743 37.19%,
+    #e9ca48 43.33%,
+    #edce49 50.36%,
+    #f0d44c 56.57%,
+    #f4d84f 62.71%,
+    #f6da52 67.12%,
+    #f7db53 73.77%,
+    #f9dd55 79.08%,
+    #f9df56 85.64%,
+    #fae157 93.5%,
+    #f9df56 100%
+  );
+  transition: background-position 10s ease;
+}
+
+.payday__content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.payday__title {
+  font-size: 46px;
+  line-height: 1.23;
+  font-weight: 900;
+}
+.payday__title-accent {
+  background-color: $color-text-contrast;
+  padding-inline: 20px;
+  display: block;
+}
+
+.payday__info {
+  font-size: 32px;
+  line-height: 1.44;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.payday__date {
+  font-size: 22px;
+  line-height: 1.44;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.payday__note {
+  font-size: 22px;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+}
+
+.payday__link {
+  text-align: center;
+  padding: 16px 32px;
+  background-color: $color-title;
+  border-radius: 8px;
+  color: $color-text-contrast;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  &:hover {
+    background-color: $color-text-contrast;
+    color: $color-title;
+  }
+  &:active {
+    box-shadow: inset 0px 2px 10px rgba(0, 0, 0, 0.2);
+    transform: translate(0, 2px);
+  }
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.1s ease,
+    transform 0.1s ease;
+}
+
+@media (min-width: 480px) {
+  .payday__title {
+    font-size: 60px;
+  }
+  .payday__title-accent {
+    max-width: 450px;
+  }
+  .payday__link {
+    align-self: flex-start;
+  }
+}
+@media (min-width: 768px) {
+  .payday {
+    padding: 80px 0;
+    background-image: url(../images/payday/background.webp);
+    // для екранів 2x
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi) {
+      background-image: url(../images/payday/background@2x.webp);
+    }
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .payday__content {
+    max-width: 450px;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1199px) {
+  .payday__content {
+    background-image: url(../images/payday/star.svg),
+      url(../images/payday/star.svg), url(../images/payday/star.svg);
+
+    background-repeat: no-repeat;
+    background-position: 80% 65%, 95% 75%, 65% 85%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .payday {
+    padding: 152px 0 140px;
+    background-image: url(../images/payday/star-spin.svg),
+      url(../images/payday/star-spin.svg), url(../images/payday/star-spin.svg),
+      url(../images/payday/star-spin.svg), url(../images/payday/background.webp);
+
+    // для екранів 2x
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi) {
+      background-image: url(../images/payday/star-spin.svg),
+        url(../images/payday/star-spin.svg), url(../images/payday/star-spin.svg),
+        url(../images/payday/star-spin.svg),
+        url(../images/payday/background@2x.webp);
+    }
+    background-position: 10% 20%, 15% 60%, 40% 25%, 45% 65%, center;
+    background-size: auto, auto, auto, auto, cover;
+  }
+  .payday__content {
+    max-width: 665px;
+  }
+  .payday__title {
+    font-size: 112px;
+  }
+  .payday__title-accent {
+    display: inline-block;
+    max-width: none;
+  }
+  .payday__info {
+    font-size: 36px;
+  }
+  .payday__date {
+    font-size: 36px;
+  }
+  .payday__note {
+    font-size: 36px;
+  }
+  .payday__link {
+    padding: 26px 52px;
+    font-size: 28px;
+  }
+}
