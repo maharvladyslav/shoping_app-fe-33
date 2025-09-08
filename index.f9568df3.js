@@ -1,2 +1,0 @@
-const n=document.querySelector(".payday");let t=null;const e=()=>{if(!n)return;const o=[];for(let n=0;n<4;n++){const n=Math.floor(100*Math.random()),t=Math.floor(100*Math.random());o.push(`${n}% ${t}%`)}n.style.backgroundPosition=`${o.join(", ")}, center`;const r=4e3+4e3*Math.random();t=setTimeout(e,r)},o=()=>{t||e()};document.addEventListener("DOMContentLoaded",(()=>{window.innerWidth>=1200&&o()})),window.addEventListener("resize",(()=>{window.innerWidth>=1200?o():(clearTimeout(t),t=null,n.style.backgroundPosition="center")}));
-//# sourceMappingURL=index.f9568df3.js.map
