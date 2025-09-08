@@ -1,0 +1,60 @@
+.community {
+  padding: 60px 0;
+  background-color: $color-bg-secondary;
+
+  &__title {
+    color: $color-text-contrast;
+    text-align: center;
+    letter-spacing: 0.03em;
+    font-weight: 900;
+    line-height: 1.27;
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    color: $color-text-contrast;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.09;
+    letter-spacing: 0.03em;
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: 480px) {
+  .community__title {
+    font-size: 26px;
+  }
+  .community__text {
+    font-size: 24px;
+  }
+}
+@media (min-width: 768px) {
+  .community {
+    padding: 80px 0;
+    &__title {
+      font-size: 36px;
+    }
+    &__text {
+      font-size: 30px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .community {
+    padding: 141px 0 156px;
+    &__title {
+      max-width: 996px;
+      margin-inline: auto;
+      font-size: 55px;
+      margin-bottom: 37px;
+    }
+    &__text {
+      font-size: 32px;
+      margin-bottom: 50px;
+    }
+  }
+}
