@@ -1,11 +1,11 @@
 .registration {
   @extend %transition-basic;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 22px;
   color: $color-text-contrast;
   background-color: $color-title;
   border-radius: 7px;
-  padding: 13px 22px 17px 22px;
+  padding: 13px 18px 17px 18px;
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -14,4 +14,27 @@
   @extend %transition-basic;
   color: $color-title;
   background-color: $color-text-contrast;
+}
+
+@media (min-width: 480px) {
+  .registration {
+    font-size: 18px;
+    margin-top: 25px;
+  }
+}
+
+@media (min-width: 768px) {
+  .registration {
+    font-size: 18px;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .registration {
+    font-size: 24px;
+    padding: 13px 22px 17px 22px;
+    margin-top: 0;
+    font-size: 24px;
+  }
 }
