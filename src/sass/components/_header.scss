@@ -1,13 +1,9 @@
 .header {
-  margin-top: 46px;
-
-  &__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &__right {
-    display: flex;
-  }
+  padding: 14px 0;
+  border-bottom: 2px solid rgba(177, 177, 177, 0.178);
+}
+.header__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
