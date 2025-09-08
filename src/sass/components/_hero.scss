@@ -9,11 +9,11 @@
 }
 
 .hero__content {
-  padding: 55px 0 0 60px;
+  padding: 33px 0 0 40px;
 }
 
 .hero__title {
-  font-size: 70px;
+  font-size: 47px;
   font-weight: 900;
   padding-bottom: 40px;
   max-width: 65%;
@@ -21,14 +21,14 @@
 
 .hero__title--span {
   background-color: $color-bg-primary;
-  display: block;
+  display: inline-block;
 }
 
 .hero__text {
-  font-size: 32px;
+  font-size: 21px;
   font-weight: 400;
   padding-bottom: 32px;
-  width: 85%;
+  width: 90%;
 }
 
 .hero__button {
@@ -43,7 +43,7 @@
 }
 
 .hero__img {
-  width: 870px;
+  max-width: 870px;
   display: none;
   background-image: url(../images/star.svg), url(../images/star.svg),
     url(../images/star.svg);
