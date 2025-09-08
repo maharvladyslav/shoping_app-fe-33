@@ -39,3 +39,7 @@ img {
   width: 100%;
   height: auto;
 }
+
+html:has(dialog[open]) {
+  overflow: hidden;
+}

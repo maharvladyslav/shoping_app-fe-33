@@ -1,0 +1,95 @@
+.subscribe-popup {
+  padding: 0;
+  border: 0;
+  outline: 0;
+  overflow: visible;
+  background-color: transparent;
+  &::backdrop {
+    background-color: #00000063;
+    animation: backdropFadeIn 260ms cubic-bezier(0.2, 0.9, 0.3, 1) both;
+  }
+  &__content {
+    position: relative;
+    overflow: hidden;
+    min-height: 250px;
+    padding: 15px 50px;
+    border-radius: 8px;
+    background-color: #ffffff77;
+    color: $color-text-contrast;
+    backdrop-filter: blur(5px);
+    transform-origin: center;
+    will-change: transform, opacity, filter;
+    animation: popOut 420ms cubic-bezier(0.2, 0.9, 0.3, 1) both;
+    box-shadow: 0 10px 30px rgba(2, 6, 23, 0.35);
+  }
+  &__content--animate {
+    animation: popIn 420ms cubic-bezier(0.2, 0.9, 0.3, 1) both,
+      subtlePulse 2400ms ease-in-out 800ms infinite;
+  }
+}
+.subscribe-popup__content.closing {
+  animation: popOut 0.3s forwards;
+}
+
+.subscribe-popup__message {
+  text-align: center;
+}
+
+@keyframes backdropFadeIn {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.39);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: translateY(18px) scale(0.96) rotate(-1.2deg);
+    filter: blur(6px);
+    transform-origin: center;
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-8px) scale(1.03) rotate(0.6deg);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0);
+    filter: blur(0);
+  }
+}
+@keyframes subtlePulse {
+  0% {
+    box-shadow: 0 10px 30px rgba(2, 6, 23, 0.3);
+  }
+  50% {
+    box-shadow: 0 14px 38px rgba(2, 6, 23, 0.36);
+    transform: translateY(-7px);
+  }
+  100% {
+    box-shadow: 0 10px 30px rgba(2, 6, 23, 0.3);
+    transform: translateY(0);
+  }
+}
+
+@keyframes popOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0);
+    filter: blur(0);
+  }
+  40% {
+    opacity: 0.98;
+    transform: translateX(-20px) scale(0.995) rotate(-0.4deg);
+    filter: blur(1px);
+  }
+  100% {
+    opacity: 0.2;
+    transform: translateX(450px) scale(0.96) rotate(-1.2deg);
+    filter: blur(6px);
+  }
+}
