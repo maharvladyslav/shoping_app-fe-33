@@ -12,7 +12,6 @@
 
   &__left {
     padding: 40px 20px;
-    // max-width: 507px;
   }
 
   &__heading {
@@ -97,13 +96,13 @@
     bottom: 150px;
     z-index: 5;
   }
-  // here
+
   .application__right {
-    background-color: red;
+    background-color: white;
     display: flex;
     width: 328px;
     height: 710px;
-    border: 25px solid #190758;
+    outline: 25px solid #c2c8da;
     border-radius: 35px;
     flex-shrink: 0;
     position: relative;
@@ -113,52 +112,27 @@
     z-index: 3;
   }
 
-  .application__right::before {
+  .application__right-wrap::before {
     content: '';
     position: absolute;
     width: 600px;
     height: 600px;
     border-radius: 50%;
     border: 1px solid #e0e0e0;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 15%;
+    left: 56%;
     z-index: -1;
   }
-  .application__right::after {
+  .application__right-wrap::after {
     content: '';
     position: absolute;
     width: 770px;
     height: 770px;
     border-radius: 50%;
     border: 1px solid #e0e0e0;
-    top: 50%;
-    left: 50%;
+    top: 52%;
+    left: 74%;
     transform: translate(-50%, -50%);
     z-index: -1;
   }
 }
-
-// .application__wrap::after {
-//   content: '';
-//   position: absolute;
-//   height: 34px;
-//   width: 34px;
-//   background-color: $color-bg-primary;
-//   border-radius: 50%;
-//   right: -50px;
-//   top: 50px;
-//   z-index: 5;
-// }
-
-// .application__wrap::before {
-//   content: '';
-//   position: absolute;
-//   height: 27px;
-//   width: 27px;
-//   background-color: $color-bg-primary;
-//   border-radius: 50%;
-//   right: 470px;
-//   bottom: 50px;
-//   z-index: 5;
-// }
