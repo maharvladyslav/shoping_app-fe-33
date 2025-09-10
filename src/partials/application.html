@@ -10,20 +10,24 @@
           Rondovision mobile app for now.
         </p>
         <div class="application__buttons">
-          <a href="#" class="application__button application__button--apple">
-            <img
-              src="/src/images/app-store.jpg"
-              alt="Download on the App Store"
-              class="application__button-image"
-            />
-          </a>
-          <a href="#" class="application__button application__button--google">
-            <img
-              src="/src/images/google-play.jpg"
-              alt="Get it on Google Play"
-              class="application__button-image"
-            />
-          </a>
+          <div class="application__button">
+            <a href="#" class="application__button--apple">
+              <img
+                src="/src/images/app-store.jpg"
+                alt="Download on the App Store"
+                class="application__button-image"
+              />
+            </a>
+          </div>
+          <div class="application__button">
+            <a href="#" class="application__button application__button--google">
+              <img
+                src="/src/images/google-play.jpg"
+                alt="Get it on Google Play"
+                class="application__button-image"
+              />
+            </a>
+          </div>
         </div>
       </div>
 
@@ -41,7 +45,9 @@
           <div class="mobile__headline">Match your style</div>
 
           <div class="mobile__search">
-            <img src="/src/images/app-searh-icon.png" alt="Search icon" />
+            <div class="mobile_img-wrap">
+              <img src="/src/images/app-searh-icon.png" alt="Search icon" />
+            </div>
             <div class="mobile__seacrch-text">Search</div>
           </div>
 
