@@ -3,7 +3,7 @@
     <h2 class="community__title">
       JOIN SHOPPING COMMUNITY TO GET MONTHLY PROMO
     </h2>
-    <p class="community__title">
+    <p class="community__text">
       Type your email down below and be young wild generation
     </p>
     <form class="community__form subscribe" data-form-subscribe>
@@ -11,13 +11,37 @@
         <label class="subscribe__label" for="subscribe-mail"
           >Add your email here</label
         >
-        <input class="subscribe__input" type="email" id="subscribe-mail" />
+        <input
+          class="subscribe__input"
+          type="email"
+          id="subscribe-mail"
+          required
+          placeholder="Add your email here"
+        />
       </div>
-      <button class="subscribe__submit" type="button">SEND</button>
+      <button class="subscribe__submit" type="submit">SEND</button>
     </form>
     <dialog class="subscribe-popup" data-modal-subscribe>
-      <div class="subscribe-popup__content">
+      <div class="subscribe-popup__content" data-form-content>
         <h3 class="subscribe-popup__message">Thank you for subscribing!</h3>
+        <div class="subscribe-loader">
+          <span class="subscribe-loader__jetpack">
+            <span class="subscribe-loader__jetpack-line"></span>
+            <span class="subscribe-loader__jetpack-line"></span>
+            <span class="subscribe-loader__jetpack-line"></span>
+            <span class="subscribe-loader__jetpack-line"></span>
+          </span>
+          <div class="subscribe-loader__body">
+            <span class="subscribe-loader__pilot"></span>
+            <div class="subscribe-loader__face"></div>
+          </div>
+        </div>
+        <div class="subscribe-loader__longfazers">
+          <span class="subscribe-loader__longfazers-line"></span
+          ><span class="subscribe-loader__longfazers-line"></span
+          ><span class="subscribe-loader__longfazers-line"></span
+          ><span class="subscribe-loader__longfazers-line"></span>
+        </div>
       </div>
     </dialog>
   </div>

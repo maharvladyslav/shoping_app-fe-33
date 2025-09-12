@@ -1,4 +1,8 @@
 .logo {
-  width: 236px;
-  height: 60px;
+  display: inline-block;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .logo {
+    max-width: 195px;
+  }
 }

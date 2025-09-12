@@ -1,21 +1,52 @@
 .navigation {
   display: flex;
-  gap: 43px;
-  padding-right: 54px;
+  gap: 10px;
   align-items: center;
+  flex-direction: column;
 }
 
+.navigation__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+}
 .navigation__link {
   @extend %transition-basic;
   font-weight: 500;
   font-size: 22px;
-  color: $color-text-nav;
+  color: $color-title;
+  border-radius: 7px;
+  padding: 13px 22px 13px 22px;
   text-transform: uppercase;
-  padding: 13px 22px 17px 22px;
+  cursor: pointer;
 }
 .navigation__link:hover {
   @extend %transition-basic;
   color: $color-text-contrast;
-  border-radius: 7px;
   background-color: $color-title;
+}
+
+@media (min-width: 768px) {
+  .navigation {
+    flex-direction: row;
+  }
+  .navigation__list {
+    flex-direction: row;
+    gap: 10px;
+  }
+  .navigation__link {
+    font-size: 12px;
+    padding: 8px 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navigation__list {
+    flex-direction: row;
+    gap: 40px;
+  }
+  .navigation__link {
+    font-size: 22px;
+  }
 }

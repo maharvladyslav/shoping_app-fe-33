@@ -1,14 +1,54 @@
-<header class="header">
+<!-- <header class="header">
   <div class="container header__container">
     <a href="#" class="logo"><img src="/src/images/logo-top.png" alt="" /></a>
     <div class="header__right">
+      <button class="burger" aria-label="Toggle navigation menu">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
+    </div>
+
+    <button class="registration">Sign Up</button>
+    <div class="menu-container">
       <ul class="navigation">
-        <li><a href="#catalogue" class="navigation__link">Catalogue</a></li>
-        <li><a href="#fashion" class="navigation__link">Fashion</a></li>
-        <li><a href="#favourite" class="navigation__link">Favourite</a></li>
-        <li><a href="#lifestyle" class="navigation__link">Lifestyle</a></li>
+        <li><a href="#catalogue" class="navigation__link"></a></li>
+        <li><a href="#fashion" class="navigation__link"></a></li>
+        <li><a href="#favourite" class="navigation__link"></a></li>
+        <li><a href="#lifestyle" class="navigation__link"></a></li>
       </ul>
-      <button class="registration">Sign Up</button>
+    </div>
+  </div>
+</header> -->
+
+<header class="header">
+  <div class="container header__wrap">
+    <a class="logo" href="#">
+      <img src="/src/images/logo-top.png" alt="WebStudio logo" />
+    </a>
+
+    <button class="menu__label toggle-button" data-menu-toggle>
+      <span class="toggle-button__line"></span>
+    </button>
+
+    <div class="menu" data-menu>
+      <nav class="navigation menu__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#" class="navigation__link" data-menu-link>Catalogue</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Fashion</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Favourite</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Lifestyle</a>
+          </li>
+        </ul>
+        <button class="registration">Sign Up</button>
+      </nav>
     </div>
   </div>
 </header>
