@@ -11,15 +11,15 @@
   background-position: 12% 17%;
 }
 
-.new-arrivals__wrap {
+.new-arrivals__list {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 60px;
 }
 
-.new-arrivals__card {
-  max-width: 484px;
+.new-arrivals__item {
+  flex-basis: 100%;
 }
 
 .new-arrivals__desc {
@@ -27,10 +27,6 @@
   align-items: center;
   justify-content: space-between;
   padding-top: 28px;
-}
-
-.new-arrivals__img {
-  width: 484px;
 }
 
 .new-arrivals__text {
@@ -53,13 +49,17 @@
 }
 
 @media (min-width: 768px) {
-  .new-arrivals__img {
-    height: 704px;
+  .new-arrivals__item {
+    flex-basis: calc((100% - 60px) / 2);
   }
 }
 
 @media (min-width: 1200px) {
-  .new-arrivals__wrap {
+  .new-arrivals__list {
     justify-content: space-between;
+  }
+
+  .new-arrivals__item {
+    flex-basis: calc((100% - 120px) / 3);
   }
 }
