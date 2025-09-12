@@ -1,9 +1,11 @@
 .application {
   padding-top: 70px;
   padding-bottom: 70px;
-  display: flex;
-  justify-content: center;
 
+  // контейнер в цій секції трішки менший, тому перезаписуємо йому max-width (додав клас application__container)
+  &__container {
+    max-width: 1500px;
+  }
   &__wrap {
     display: flex;
     align-items: center;
@@ -54,13 +56,13 @@
 @media (min-width: 1200px) {
   .application__wrap {
     flex-direction: row;
-    justify-content: center;
+    // так відступ буде респонсивним (навідміну від margin-right: 150px; але з мінімальними gap
+    justify-content: space-between;
     gap: 60px;
   }
 
   .application__left {
     text-align: left;
-    margin-right: 150px;
   }
 
   .application__heading {
@@ -85,17 +87,20 @@
     width: 204px;
   }
 
-  .application__button::before {
-    content: '';
-    position: absolute;
-    height: 17px;
-    width: 17px;
-    background-color: #89807a;
-    border-radius: 50%;
-    right: -120px;
-    bottom: 150px;
-    z-index: 5;
-  }
+  // Псевдоелемент з абсолютним позиціонуванням позиціонується відносно сторінки,
+  // а не батьківського елементу тому декоративне коло розмістилося не в тому місці де потрібно.
+
+  // .application__button::before {
+  //   content: '';
+  //   position: absolute;
+  //   height: 17px;
+  //   width: 17px;
+  //   background-color: #89807a;
+  //   border-radius: 50%;
+  //   right: -120px;
+  //   bottom: 150px;
+  //   z-index: 5;
+  // }
 
   .application__right {
     background-color: white;
@@ -106,33 +111,43 @@
     border-radius: 35px;
     flex-shrink: 0;
     position: relative;
-    margin: 0;
-    box-sizing: border-box;
     align-items: center;
     z-index: 3;
   }
 
-  .application__right-wrap::before {
-    content: '';
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    border-radius: 50%;
-    border: 1px solid #e0e0e0;
-    top: 15%;
-    left: 56%;
-    z-index: -1;
+  // Найпростіший спосіб реалізувати весь декор (просто фон до обгортки)
+  .application__right-wrap {
+    flex-basis: 670px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/application-decor.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
-  .application__right-wrap::after {
-    content: '';
-    position: absolute;
-    width: 770px;
-    height: 770px;
-    border-radius: 50%;
-    border: 1px solid #e0e0e0;
-    top: 52%;
-    left: 74%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-  }
+  // .application__right-wrap::before {
+  //   content: '';
+  //   position: absolute;
+  //   width: 600px;
+  //   height: 600px;
+  //   border-radius: 50%;
+  //   border: 1px solid #e0e0e0;
+  //   left: 50%;
+  //   top: 50%;
+  //   transform: translate(-50%, -50%);
+  //   z-index: -1;
+  // }
+  // .application__right-wrap::after {
+  //   content: '';
+  //   position: absolute;
+  //   width: 770px;
+  //   height: 770px;
+  //   border-radius: 50%;
+  //   border: 1px solid #e0e0e0;
+  //   left: 50%;
+  //   top: 50%;
+  //   transform: translate(-50%, -50%);
+  //   z-index: -1;
+  // }
 }
