@@ -56,7 +56,7 @@
 @media (min-width: 1200px) {
   .application__wrap {
     flex-direction: row;
-    // так відступ буде респонсивним (навідміну від margin-right: 150px; але з мінімальними gap
+    // так відступ буде респонсивним (навідміну від margin-right: 150px; але з мінімальними gap)
     justify-content: space-between;
     gap: 60px;
   }
